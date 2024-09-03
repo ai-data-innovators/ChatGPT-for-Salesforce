@@ -4,14 +4,14 @@ Detailed guidance on configuring ChatGPT as a conversational interface for Sales
 
 ## Leveraging ChatGPT to Streamline Salesforce Workflows
 
-Integrating ChatGPT with Salesforce allows users to use the multi-modal intelligent user interface to interact with a powerful business system. The configuration described here is simple enough for any tech-savvy individual to implement, yet opens up much power and future possibilities. 
+Integrating ChatGPT with Salesforce grafts a multi-modal intelligent user interface onto a powerful business system. This configuration is accessible enough for any tech-savvy individual to implement, yet unlocks significant capabilities and future possibilities.
 
-- Multi-modal input: Allows users to interact with Salesforce using text, images, or voice (where supported by ChatGPT)
-- Simple configuration using Salesforce's standard Connected App feature and ChatGPT's GPT builder, accessible to all Plus, Team or Enterprise subscribers
+Key Features:
+* Multi-modal input: Interact with ChatGPT using text, images, or voice while reading data from and writing data to Salesforce.
+* Enhanced mobile experience: Enables a flow experience for mobile users, such as field sales teams, to effortlessly write notes, create tasks, and generate leads.
+* Simple configuration: Utilizes Salesforce's standard Connected App feature and ChatGPT's GPT builder, available to all Plus, Team, or Enterprise subscribers.
+* Prompt Engineering: Supports interactive improvement through prompt engineering.
+* API Integration: Leverages APIs available for modern SaaS (Software as a Service) software.
 
-While the initial setup is straightforward, this integration opens doors to powerful future enhancements:
-
-- Enable flow experience for mobile users, like field sales people, to write notes, create tasks and leads. 
-- Start the iterartive process to incorporate AI into routine business processes.
-- Take the first step towards a more intelligent, responsive, and efficient business ecosystem.
+While the initial setup is straightforward, it initiates an iterative process to incorporate AI into routine business workflows and drive towards a more intelligent, responsive, and efficient systems environment for business professionals.
 
