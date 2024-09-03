@@ -21,7 +21,7 @@ At high level, there are only three steps:
 
 * Configure a Salesforce Connected App
 * Create a Custom GPT in ChatGPT
-* Validate and Optimize Your Integration
+* Validate, Share, and Keep Improving Your GPT
 
 ### Configure a Salesforce Connected App
 
@@ -60,19 +60,26 @@ By now, the ChatGPT screen loolks like this:
 
 ![ChatGPT GPT Configuration Screen Part 1](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Custom-GPT-Salesforce-Companion-Configuration.png)
 
-6. Under "**Actions**", click "**Create new action**". 
-5.1. For **Authentication**, select “**OAuth**”, and set the following parameters: 
+5. Under "**Actions**", click "**Create new action**".
+6. For **Authentication**, select “**OAuth**”, and set the following parameters: 
   * Client ID = the Consumer Key from the Salesforce connected app
   * Client Secret = the Consumer Secret from the Salesforce connected app
   * Authorization URL = https://<your subdomain>/services/oauth2/authorize
   * Token URL = https://<your subdomain>/services/oauth2/token
   * Scope: api, refresh_token, offline_access
   * Token Exchange Method: Default (POST request)
-5.2 For OpenAPI schema, you can download a template here: …. 
-  * You need to replace the server value in the template.  
-  * Copy and paste the result file to the schema textbox. (Import from URL does not work when I tested it. )
+7. For OpenAPI schema, you can download a sample from here: …. 
+  * Use a text editor to change the sample, replace "ai-experience-dev-ed.develop.my.salesforce.com" with your subdomain. There are places to change in the initial version.   
+  * Copy and paste the resulting file to the schema textbox. (The "Import from URL" function does not work at time of writing. )
 
-### Validate and Optimize Your Integration
+The **Add actions** screen look like this: 
+
+![Custom GPT Add Actions Screen](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Custom-GPT-Add-Actions.png)
+
+8. Click the "Create" on the top right corner of the screen. On the "Share GPT" popup, select "Only me". At this point, we are not ready to share the GPT yet.
+9. Now, you will find a "**Callback URL**" on the custom GPT Configure screen. Get this URL, revisit the Salesforce connected app to replace the placeholder value with this URL. After the change, take a few minutes of rest before coming back to test the custom GPT. 
+
+### Validate, Share, and Keep Improving Your GPT
 
 When testing your ChatGPT-Salesforce integration:
 
