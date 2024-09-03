@@ -1,0 +1,238 @@
+openapi: 3.1.0
+info:
+  title: Salesforce Query API
+  description: >-
+    API for executing SOQL queries against Salesforce objects.
+    For example, to get all accounts, use this URL: "https://ai-experience-dev-ed.develop.my.salesforce.com/services/data/v61.0/query?q=SELECT+Id,Name,Type,Industry,Phone+FROM+Account"
+    The query URL template is: "https://ai-experience-dev-ed.develop.my.salesforce.com/services/data/v61.0/query?q=<URL encoded SoQL>"
+    The account query is: "SELECT Id,Name,Type,Industry,Phone FROM Account"
+    The opportunity query is: "SELECT Id, Name, Amount, StageName, CloseDate, Account.Name FROM Opportunity WHERE IsClosed = FALSE"
+    The contact query for an account is: "SELECT Id, FirstName, LastName, Email, Phone, Account.Name FROM Contact WHERE AccountId=<Account Id> IsDeleted = FALSE"
+  version: '61.0'
+servers:
+  - url: https://ai-experience-dev-ed.develop.my.salesforce.com/services/data/v61.0
+paths:
+  /query:
+    get:
+      operationId: executeQuery
+      summary: Execute a SOQL query
+      description: Retrieves data from Salesforce objects based on a SOQL query
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: The SOQL query to execute
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResult'
+        '400':
+          description: Bad request (e.g., invalid SOQL query)
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+      security:
+        - oauth2:
+            - api
+  /sobjects/Lead/:
+    post:
+      summary: Create a new lead
+      description: Creates a new lead in Salesforce.
+      operationId: createLead
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                LastName:
+                  type: string
+                  description: The last name of the lead.
+                  example: Doe
+                FirstName:
+                  type: string
+                  description: The first name of the lead.
+                  example: John
+                Company:
+                  type: string
+                  description: The company name associated with the lead.
+                  example: Example Company
+                Email:
+                  type: string
+                  description: The email address of the lead.
+                  example: johndoe@example.com
+                Phone:
+                  type: string
+                  description: The phone number of the lead.
+                  example: 123-456-7890
+      responses:
+        '201':
+          description: Lead created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The unique ID of the created lead.
+                    example: "00Q3h00000E0w1XE"
+        '400':
+          description: Bad Request - Invalid input or missing required fields.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message indicating why the request failed.
+                    example: "Required fields are missing."
+        '401':
+          description: Unauthorized - Invalid or missing access token.
+        '500':
+          description: Internal Server Error
+      security:
+        - oauth2:
+            - api
+
+  /sobjects/Task:
+    post:
+      summary: Create a Task
+      description: Creates a new Task in Salesforce.
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Subject:
+                  type: string
+                  example: Makefile Follow-up Call
+                Priority:
+                  type: string
+                  example: High
+                Status:
+                  type: string
+                  example: Not Started
+                OwnerId:
+                  type: string
+                  example: 005ak000006e1DFAAY
+                WhoId:
+                  type: string
+                  example: 003ak000004Qj7VAAS
+                WhatId:
+                  type: string
+                  example: 001ak00000SCG95AAH
+                ActivityDate:
+                  type: string
+                  format: date
+                  example: 2024-09-05
+      responses:
+        '201':
+          description: Task created successfully
+        '400':
+          description: Bad Request
+
+  /sobjects/ContentNote:
+    post:
+      summary: Create a ContentNote
+      description: Creates a new ContentNote in Salesforce.
+      operationId: createContentNote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Title:
+                  type: string
+                  example: Note 2 from Makefile
+                Content:
+                  type: string
+                  description: Base64-encoded content of the note
+                  example: VGhlIG1ha2UgdGFyZ2V0IGlzIGNyZWF0ZS1ub3RlLgo=
+      responses:
+        '201':
+          description: ContentNote created successfully
+        '400':
+          description: Bad Request
+
+  /sobjects/ContentDocumentLink:
+    post:
+      summary: Link a ContentDocument
+      description: Links a ContentDocument to a Salesforce record.
+      operationId: createContentDocumentLink
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ContentDocumentId:
+                  type: string
+                  example: 069ak000006JbzhAAC
+                LinkedEntityId:
+                  type: string
+                  example: 001ak00000SCG95AAH
+                ShareType:
+                  type: string
+                  enum:
+                    - V
+                    - C
+                  example: V
+      responses:
+        '201':
+          description: ContentDocumentLink created successfully
+        '400':
+          description: Bad Request
+
+components:
+  schemas:
+    QueryResult:
+      type: object
+      properties:
+        totalSize:
+          type: integer
+          description: The total number of records returned
+        done:
+          type: boolean
+          description: Indicates whether all records have been retrieved
+        records:
+          type: array
+          items:
+            $ref: '#/components/schemas/SObject'
+        nextRecordsUrl:
+          type: string
+          description: URL to retrieve the next set of records if the query result is too large
+    SObject:
+      type: object
+      properties:
+        attributes:
+          type: object
+          properties:
+            type:
+              type: string
+            url:
+              type: string
+        Id:
+          type: string
+        Name:
+          type: string
+        Type:
+          type: string
+        Industry:
+          type: string
+        Phone:
+          type: string
