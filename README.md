@@ -15,3 +15,56 @@ Key Features:
 
 While the initial setup is straightforward, it initiates an iterative process to incorporate AI into routine business workflows and drive towards a more intelligent, responsive, and efficient systems environment for business professionals.
 
+## Step by Step Implementation Guide
+
+Overall, there are only three steps: 
+
+1. Configure a Salesforce Connected App
+2. Set up a Custom GPT in ChatGPT
+3. Validate and Optimize Your Integration
+
+### Configure a Salesforce Connected App
+
+1. Log in to your Salesforce org as an administrator.
+2. Go to Setup > Apps > App Manager.
+3. Click "New Connected App" in the upper right corner.
+4. Fill in the basic information:
+   - Connected App Name: "ChatGPT Integration" (Or any name you like)
+   - API Name: This will auto-fill
+   - Contact Email: Your email address
+5. Check "Enable OAuth Settings"
+6. Set the Callback URL to a temporary URL (e.g., https://login.salesforce.com/services/oauth2/success)
+7. Add these OAuth Scopes:
+   - Access and manage your data (api)
+   - Perform requests on your behalf at any time (refresh_token, offline_access)
+8. Save the connected app.
+9. After saving, note down the Consumer Key and Consumer Secret. You'll need these later.
+
+### Set up a Custom GPT in ChatGPT
+
+To configure a GPT with an action to interact with Salesforce:
+
+1. Go to chat.openai.com and click on "Explore GPTs" in the left sidebar.
+2. Click "Create a GPT" and give it a name like "Salesforce Assistant".
+3. In the configuration, add a description explaining its purpose.
+4. In the "Instructions" section, add guidelines for how the GPT should interact with Salesforce, including any limitations or specific use cases. You can download a sample one from here: …
+5. Under "Actions", click "Add action". 
+5.1. For Authentication, select “OAuth”, and set the following parameters: 
+  * Client ID = the Consumer Key from the Salesforce connected app
+  * Client Secret = the Consumer Secret from the Salesforce connected app
+  * Authorization URL = …
+  * Token URL = 
+  * Scope: api, refresh_token, offline_access
+  * Token Exchange Method: Default (POST request)
+5.2 For OpenAPI schema, you can download a template here: …. 
+  * You need to replace the server value in the template.  
+  * Copy and paste the result file to the schema textbox. (Import from URL does not work when I tested it. )
+
+### Validate and Optimize Your Integration
+
+When testing your ChatGPT-Salesforce integration:
+
+1. Start with simple queries like "Find the latest opportunity for [Account Name]" or "Create a task for [Contact Name]".
+2. Pay attention to how the GPT formulates API requests and handles responses.
+3. Refine your prompts and instructions based on the results.
+4. Gradually test more complex scenarios, such as updating records or running reports.
