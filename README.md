@@ -25,7 +25,7 @@ At high level, there are only three steps:
 
 ### Configure a Salesforce Connected App
 
-[Salesforce Connected App for GPT](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Salesforce-Connected-App-for-GPT.png)
+![Salesforce Connected App for GPT](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Salesforce-Connected-App-for-GPT.png)
 
 1. Log in to your Salesforce org as an administrator. 
 2. Go to **Setup** > **Apps** > **App Manager**.
