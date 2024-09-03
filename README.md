@@ -25,6 +25,8 @@ At high level, there are only three steps:
 
 ### Configure a Salesforce Connected App
 
+[Salesforce Connected App for GPT](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Salesforce-Connected-App-for-GPT.png)
+
 1. Log in to your Salesforce org as an administrator. 
 2. Go to **Setup** > **Apps** > **App Manager**.
 3. Click "**New Connected App**" in the upper right corner.
@@ -33,11 +35,11 @@ At high level, there are only three steps:
    - API Name: This will auto-fill
    - Contact Email: Your email address
 5. Check "**Enable OAuth Settings**"
-6. Set the Callback URL to a temporary URL (e.g., **https://login.salesforce.com/services/oauth2/success**
-7. Add these OAuth Scopes:
+6. Set the Callback URL to a temporary URL (e.g., https://login.salesforce.com/services/oauth2/success). Later we 
+8. Add these OAuth Scopes:
    - **Manage user data via API (api)**
    - **Perform requests at any time (refresh_token, offline_access)**
-8. Save the connected app.
+9. Save the connected app.
 10. After saving, note down the **Consumer Key and Secret**. You'll need these later.
 11. Also note down your Salesforce subdomain name from the brower address bar, which shows the URL. For example, my URL is "https://ai-experience-dev-ed.develop.my.salesforce.com/...", so, for me,
   * Instance URL = https://ai-experience-dev-ed.develop.my.salesforce.com/
