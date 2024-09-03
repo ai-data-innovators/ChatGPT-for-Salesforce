@@ -39,23 +39,28 @@ At high level, there are only three steps:
    - **Perform requests at any time (refresh_token, offline_access)**
 
 Now the screen looks like this
-![Salesforce Connected App for GPT](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Salesforce-Connected-App-for-GPT.png)
+![Salesforce Connected App for GPT](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Salesforce-Connected-App-for-GPT-Configuration.png)
 
-9. Save the connected app.
-10. After saving, note down the **Consumer Key and Secret**. You'll need these later.
-11. Also note down your Salesforce subdomain name from the brower address bar, which shows the URL. For example, my URL is "https://ai-experience-dev-ed.develop.my.salesforce.com/...", so, for me,
-  * Instance URL = https://ai-experience-dev-ed.develop.my.salesforce.com/
-  * Subdomain = ai-experience-dev-ed.develop.my.salesforce.com
+9. Save the connected app. After save, click the "Continue" buttom to go to the connected app screen, which has a "**Manage Consumer Details**" button. Click the button to get the "**Consumer Key and Secret**". 
+10. Note down the following infomation needed for ChatGPT configuration. 
+  * **Consumer Key**
+  * **COnsumer Secret**
+  * Your Salesforce **subdomain** from the brower address bar. For example, my page URL is "https://ai-experience-dev-ed.develop.my.salesforce.com/...", so, my subdomain is "ai-experience-dev-ed.develop.my.salesforce.com"
 
 ### Create a Custom GPT in ChatGPT
 
 To configure a GPT with an action to interact with Salesforce:
 
 1. Go to chat.openai.com and click on "**Explore GPTs**" in the left sidebar.
-2. Click "**Create a GPT**" and give it a name like "**Salesforce Assistant**".
+2. Click "**Create a GPT**" and give it a name like "**Salesforce Companion**".
 3. In the configuration, add a **description** explaining its purpose.
 4. In the "**Instructions**" section, add guidelines for how the GPT should interact with Salesforce. You can download a sample one from here: …
-5. Under "**Actions**", click "**Create new action**". 
+
+By now, the ChatGPT screen loolks like this: 
+
+![ChatGPT GPT Configuration Screen Part 1](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Custom-GPT-Salesforce-Companion-Configuration.png)
+
+6. Under "**Actions**", click "**Create new action**". 
 5.1. For **Authentication**, select “**OAuth**”, and set the following parameters: 
   * Client ID = the Consumer Key from the Salesforce connected app
   * Client Secret = the Consumer Secret from the Salesforce connected app
