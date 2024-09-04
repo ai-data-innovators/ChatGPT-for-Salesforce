@@ -77,7 +77,13 @@ The **Add actions** screen look like this:
 ![Custom GPT Add Actions Screen](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Custom-GPT-Add-Actions.png)
 
 8. Click the "Create" on the top right corner of the screen. On the "Share GPT" popup, select "Only me". At this point, we are not ready to share the GPT yet.
-9. Now, you will find a "**Callback URL**" on the custom GPT Configure screen. Get this URL, revisit the Salesforce connected app to replace the placeholder value with this URL. After the change, take a few minutes of rest before coming back to test the custom GPT. 
+9. Now, you will find a "**Callback URL**" on the custom GPT Configure screen. Get this URL, revisit the Salesforce connected app to replace the placeholder value with this URL. After the change, take a good rest before coming back to test the custom GPT, as the redirct URL change can take quite a while in my experience.
+10. Finally, you can test the GPT. Here are a few simple test prompts I haved used:
+  * Please get my accounts
+  * Please get the contacts on account ACME. 
+  * Please get my opportunities
+  * Now let's create a note
+  * Let's create a task
 
 ### Validate, Share, and Keep Improving Your GPT
 
