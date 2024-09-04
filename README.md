@@ -68,8 +68,8 @@ By now, the ChatGPT screen loolks like this:
   * Token URL = https://<your subdomain>/services/oauth2/token
   * Scope: api, refresh_token, offline_access
   * Token Exchange Method: Default (POST request)
-7. For OpenAPI schema, you can download a sample from here: …. 
-  * Use a text editor to change the sample, replace "ai-experience-dev-ed.develop.my.salesforce.com" with your subdomain. There are places to change in the initial version.   
+7. For OpenAPI schema, you can download a [sample YAML file](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/sample-salesforce-api-spec-for-custom-gpt.yaml). 
+  * Use a text editor to replace "ai-experience-dev-ed.develop.my.salesforce.com" with your subdomain. There are a few places to change in the initial version. 
   * Copy and paste the resulting file to the schema textbox. (The "Import from URL" function does not work at time of writing. )
 
 The **Add actions** screen look like this: 
