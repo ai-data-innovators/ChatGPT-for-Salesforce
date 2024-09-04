@@ -2,7 +2,7 @@
 
 Detailed guidance on configuring ChatGPT as a conversational interface for Salesforce.
 
-## Leveraging ChatGPT to Streamline Salesforce Workflows
+## Leveraging ChatGPT to as an Intelligent Interface for Salesforce
 
 Integrating ChatGPT with Salesforce adds a multi-modal intelligent user interface onto a powerful business system. This configuration is accessible enough for any tech-savvy individual to implement, yet unlocks significant capabilities and future possibilities.
 
