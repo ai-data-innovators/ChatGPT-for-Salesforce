@@ -1,10 +1,10 @@
-# ChatGPT for Salesforce
+# ChatGPT for Salesforce Configuration Guide
 
 Detailed guidance on configuring ChatGPT as a conversational interface for Salesforce.
 
 ## Leveraging ChatGPT to Streamline Salesforce Workflows
 
-Integrating ChatGPT with Salesforce grafts a multi-modal intelligent user interface onto a powerful business system. This configuration is accessible enough for any tech-savvy individual to implement, yet unlocks significant capabilities and future possibilities.
+Integrating ChatGPT with Salesforce adds a multi-modal intelligent user interface onto a powerful business system. This configuration is accessible enough for any tech-savvy individual to implement, yet unlocks significant capabilities and future possibilities.
 
 Key Features:
 * Multi-modal input: Interact with ChatGPT using text, images, or voice while reading data from and writing data to Salesforce.
@@ -13,9 +13,9 @@ Key Features:
 * Prompt Engineering: Supports interactive improvement through prompt engineering.
 * API Integration: Leverages APIs available for modern SaaS (Software as a Service) software.
 
-While the initial setup is straightforward, it initiates an iterative process to incorporate AI into routine business workflows and drive towards a more intelligent, responsive, and efficient systems environment for business professionals.
+While the initial setup is straightforward, it begins an iterative process to incorporate AI into routine business workflows" for consistency and drive towards a more intelligent, responsive, and efficient systems environment for business professionals.
 
-## Step by Step Implementation Guide
+## Step-by-Step Implementation Guide
 
 At high level, there are only three steps: 
 
@@ -41,7 +41,7 @@ At high level, there are only three steps:
 Now the screen looks like this
 ![Salesforce Connected App for GPT](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Salesforce-Connected-App-for-GPT-Configuration.png)
 
-9. Save the connected app. After save, click the "Continue" buttom to go to the connected app screen, which has a "**Manage Consumer Details**" button. Click the button to get the "**Consumer Key and Secret**". 
+9. Save the connected app. After saving, click the "Continue" buttom to go to the connected app screen, which has a "**Manage Consumer Details**" button. Click the button to get the "**Consumer Key and Secret**". 
 10. Note down the following infomation needed for ChatGPT configuration. 
   * **Consumer Key**
   * **Consumer Secret**
@@ -53,8 +53,8 @@ To configure a GPT with an action to interact with Salesforce:
 
 1. Go to chat.openai.com and click on "**Explore GPTs**" in the left sidebar.
 2. Click "**Create a GPT**" and give it a name like "**CRM Companion**".
-3. In the configuration, add a **description** explaining its purpose.
-4. In the "**Instructions**" section, add guidelines for how the GPT should interact with Salesforce. You copy and paste this tested sample: [sample-gpt-instructions-for-salesforce-integration](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/sample-gpt-instructions-for-salesforce-integration.md)
+3. Add a **description** explaining its purpose. Do it quickly and make it simple. 
+4. In the "**Instructions**" section, add guidelines for how the GPT should interact with Salesforce. You  can copy and paste this tested sample: [sample-gpt-instructions-for-salesforce-integration](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/sample-gpt-instructions-for-salesforce-integration.md)
 
 By now, the ChatGPT screen loolks like this: 
 
