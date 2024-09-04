@@ -94,4 +94,4 @@ There is no need for perfection as AI is making rapid progress. Let's focus on t
 
 ### Final Words
 
-I hope you found this interesting to try. I'd appreciate any feedback using this simple Google Form []()
+I hope you found this interesting to try. I'd appreciate any feedback using this simple form [ChatGPT-for-Salesforce Feedback Form](https://forms.gle/ukDhe3ryVT2X1DXQ9). 
