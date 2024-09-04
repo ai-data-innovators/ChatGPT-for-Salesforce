@@ -52,13 +52,13 @@ Now the screen looks like this
 To configure a GPT with an action to interact with Salesforce:
 
 1. Go to chat.openai.com and click on "**Explore GPTs**" in the left sidebar.
-2. Click "**Create a GPT**" and give it a name like "**Salesforce Companion**".
+2. Click "**Create a GPT**" and give it a name like "**CRM Companion**".
 3. In the configuration, add a **description** explaining its purpose.
 4. In the "**Instructions**" section, add guidelines for how the GPT should interact with Salesforce. You copy and paste this tested sample: [sample-gpt-instructions-for-salesforce-integration](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/sample-gpt-instructions-for-salesforce-integration.md)
 
 By now, the ChatGPT screen loolks like this: 
 
-![ChatGPT GPT Configuration Screen Part 1](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Custom-GPT-Salesforce-Companion-Configuration.png)
+![ChatGPT GPT Configuration Screen](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/Custom-GPT-CRM-Companion-Configuration.png)
 
 5. Under "**Actions**", click "**Create new action**".
 6. For **Authentication**, select “**OAuth**”, and set the following parameters: 
