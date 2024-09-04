@@ -64,8 +64,8 @@ By now, the ChatGPT screen loolks like this:
 6. For **Authentication**, select “**OAuth**”, and set the following parameters: 
   * Client ID = the Consumer Key from the Salesforce connected app
   * Client Secret = the Consumer Secret from the Salesforce connected app
-  * Authorization URL = https://<your subdomain>/services/oauth2/authorize
-  * Token URL = https://<your subdomain>/services/oauth2/token
+  * Authorization URL = https://{your subdomain}/services/oauth2/authorize
+  * Token URL = https://{your subdomain}/services/oauth2/token
   * Scope: api, refresh_token, offline_access
   * Token Exchange Method: Default (POST request)
 7. For OpenAPI schema, you can download this tested sample: [sample-salesforce-openapi-spec-for-custom-gpt.yaml](https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/sample-salesforce-openapi-spec-for-custom-gpt.yaml). 
