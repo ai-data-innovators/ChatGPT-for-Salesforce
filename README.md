@@ -17,6 +17,8 @@ While the initial setup is straightforward, it begins an iterative process to in
 
 ## Screenshots of Custom GPT Field Force Companion
 
+Below are screenshots of the Custom GPT "Field Force Companion" in action. The images demonstrate how ChatGPT can be used to query Salesforce data and create new records directly within the interface.
+
 <p float="left">
   <img src="https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/ChatGPT-GPT-Field-Force-Companion-Queries.png" alt="Query Salesforce in ChatGPT" width="45%" />
   <img src="https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/ChatGPT-GPT-Field-Force-Companion-Create-Records.png" alt="Create Salesforce Records in ChatGPT" width="45%" />
