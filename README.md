@@ -15,6 +15,13 @@ Key Features:
 
 While the initial setup is straightforward, it begins an iterative process to incorporate AI into routine business workflows, driving towards a more intelligent, responsive, and efficient systems environment for business professionals.
 
+## Screenshots of Custom GPT Field Force Companion
+
+<p float="left">
+  <img src="https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/ChatGPT-GPT-Field-Force-Companion-Queries.png" alt="Query Salesforce in ChatGPT" width="45%" />
+  <img src="https://github.com/ai-data-innovators/ChatGPT-for-Salesforce/blob/main/images/ChatGPT-GPT-Field-Force-Companion-Create-Records.png" alt="Create Salesforce Records in ChatGPT" width="45%" />
+</p>
+
 ## Step-by-Step Implementation Guide
 
 At a high level, there are only three steps: 
